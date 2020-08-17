@@ -107,7 +107,9 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="ZedGraph, Version=5.0.10.8624, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL" />
+    <Reference Include="ZedGraph, Version=5.0.10.8624, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZedGraph.6.0.0-alpha0001\lib\net40\ZedGraph.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core.cs" />
@@ -500,6 +502,12 @@
     <Compile Include="Update\UpdateInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ReportPrinting.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ZedGraph.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Data\AnalysisSet.xsc">
       <DependentUpon>AnalysisSet.xsd</DependentUpon>
     </None>
@@ -642,9 +650,6 @@
     </Content>
     <None Include="Properties\DataSources\OptionsOracle.Forms.UpgradeForm+UpgradeInfo.datasource" />
     <None Include="Resources\system-software-update.png" />
-    <None Include="ZedGraph.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,KB2468871">
@@ -696,7 +701,7 @@
       <Name>OOMigrationLib</Name>
     </ProjectReference>
     <ProjectReference Include="..\OOServerLib\OOServerLib.csproj">
-      <Project>{CC3DC09D-EDCB-446A-A3A3-10A5450007A6}</Project>
+      <Project>{cc3dc09d-edcb-446a-a3a3-10a5450007a6}</Project>
       <Name>OOServerLib</Name>
     </ProjectReference>
     <ProjectReference Include="..\OOServerNSE\OOServerNSE.csproj">
